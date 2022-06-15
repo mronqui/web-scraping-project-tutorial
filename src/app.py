@@ -32,7 +32,11 @@ tesla_revenue = tesla_revenue[tesla_revenue["Revenue"] != ""]
 records = tesla_revenue.to_records(index=False)
 #print(f"hay estos records :{leg(records)}")
 
+##para generar CSV
+#tesla_revenue.to_csv('mydb.csv', index=False)
+
 list_of_tuples = list(records)
+
 
 connection = sqlite3.connect("Tesla.db")
 c = connection.cursor()
